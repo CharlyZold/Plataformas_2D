@@ -6,6 +6,7 @@ public class GameControlScript : MonoBehaviour {
 	private Vector3 punto_inicio;
 	public GameObject player;
 	public bool esta_vivo = true;
+
 		
 	void Start(){
 		punto_inicio = player.transform.position;
