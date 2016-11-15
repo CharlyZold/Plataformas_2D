@@ -8,10 +8,12 @@ public class prueba_controles_anim : MonoBehaviour {
 	public bool colision_suelo = false;
 	private Animator anim;
 	private Rigidbody2D rb;
+	private GameControlScript gcs;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
+		gcs = GameObject.Find ("GameControl").GetComponent<GameControlScript>();
 	}
 
 	// Update is called once per frame
@@ -63,5 +65,10 @@ public class prueba_controles_anim : MonoBehaviour {
 			Debug.Log ("No toco suelo");
 
 		} 
+	}
+	void OnCollisionEnter2D(Collision2D col){
+		if (col.gameObject.tag == "Muerte") {
+			gcs.respawn();
+		}
 	}
 }
