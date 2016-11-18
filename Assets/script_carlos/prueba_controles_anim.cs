@@ -54,7 +54,7 @@ public class prueba_controles_anim : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D objeto){
 		if (objeto.tag == "Suelo") {
-			colision_suelo = true;
+			colision_suelo = true;	
 			Debug.Log ("Toco suelo");
 			anim.SetBool ("jump", false);
 		} 

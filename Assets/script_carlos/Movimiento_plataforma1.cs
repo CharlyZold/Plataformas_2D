@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Movimiento_plataforma : MonoBehaviour {
+public class Movimiento_plataforma1 : MonoBehaviour {
 	public GameObject plataforma;
 	public Transform Inicio;
 	public Transform Fin;
@@ -18,9 +18,11 @@ public class Movimiento_plataforma : MonoBehaviour {
 
 		if (plataforma.transform.position == Fin.position) {
 			Destino = Inicio.position;
+			plataforma.transform.localScale = new Vector3 (-1, 1, 1);
 		}
 		if (plataforma.transform.position == Inicio.position) {
 			Destino = Fin.position;
+			plataforma.transform.localScale = new Vector3 (1, 1, 1);
 		}
 	}
 }
