@@ -8,10 +8,10 @@ public class moneda_br : MonoBehaviour {
 	control_text_monedas cm;
 	// Use this for initialization
 	void Start () {
-		Destroy (gameObject, 10);
+		Destroy (gameObject, 3);
 		//Random.Range (0,10);
 		rb = GetComponent<Rigidbody2D> ();
-		//rb.AddForce (new Vector2 (Random.Range(-200,200), 200));
+		rb.AddForce (new Vector2 (Random.Range(-200,200), 200));
 		texto_moneda = GameObject.Find ("Text_mon");
 		cm = texto_moneda.GetComponent<control_text_monedas> ();
 	}
